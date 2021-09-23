@@ -21,18 +21,26 @@
         let position = setToRandom(200);
         // Add image to div id = game
         let game = document.getElementById('game');
-        let newimg = document.createElement('img');
+        let newimg = "PacMan1.png";
+        let newimg2 = "PacMan2.png";
         newimg.style.position = 'absolute';
         newimg.src = "PacMan1.png";
         newimg.width = 100;
         newimg.style.left = position.x;
         newimg.style.top = position.y;
         game.appendChild(newimg);
+        newimg2.style.position = 'absolute';
+        newimg2.src = "PacMan1.png";
+        newimg2.width = 100;
+        newimg2.style.left = position.x;
+        newimg2.style.top = position.y;
+        game.appendChild(newimg2);
         // new style of creating an object
         return {
             position,
             velocity,
-            newimg
+            newimg,
+            newimg2
         }
   
     }
