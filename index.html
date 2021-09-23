@@ -15,13 +15,13 @@
         }
     }
     // Factory to make a PacMan 
-    function toggleImage() {
+    function makePac() {
         // returns an object with values scaled {x: 33, y: 21}
         let velocity = setToRandom(10);
         let position = setToRandom(200);
         // Add image to div id = game
         let game = document.getElementById('game');
-        let newimg = "PacMan1.png";
+        let newimg = document.createElement("img");
         let newimg2 = "PacMan2.png";
         newimg.style.position = 'absolute';
         newimg.src = "PacMan1.png";
@@ -29,12 +29,7 @@
         newimg.style.left = position.x;
         newimg.style.top = position.y;
         game.appendChild(newimg);
-        newimg2.style.position = 'absolute';
-        newimg2.src = "PacMan1.png";
-        newimg2.width = 100;
-        newimg2.style.left = position.x;
-        newimg2.style.top = position.y;
-        game.appendChild(newimg2);
+        
         // new style of creating an object
         return {
             position,
@@ -66,7 +61,7 @@
     }
 
     function makeOne() {
-        pacMen.push(toggleImage()); // add a new PacMan
+        pacMen.push(makePac()); // add a new PacMan
     }
 </SCRIPT>
 
