@@ -15,7 +15,7 @@
         }
     }
     // Factory to make a PacMan 
-    function makePac() {
+    function toggleImage() {
         // returns an object with values scaled {x: 33, y: 21}
         let velocity = setToRandom(10);
         let position = setToRandom(200);
@@ -58,7 +58,7 @@
     }
 
     function makeOne() {
-        pacMen.push(makePac()); // add a new PacMan
+        pacMen.push(toggleImage()); // add a new PacMan
     }
 </SCRIPT>
 
